@@ -1,17 +1,78 @@
 h1 {
-  color: red;
+  color: black;
 }
+
+/*li {
+  list-style:none;
+}*/
+
+li span.todo-text {
+  display: inline-block;
+  width: 6em;
+  color: cornflowerblue;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 li span.todo-done {
   text-decoration: line-through;
   color: green;
 }
 
-li span.todo-text {
+button{
+  position: relative;
+  overflow: visible;
   display: inline-block;
-  width: 6em;
-  text-overflow: ellipsis;
-  /* Required for text-overflow to do anything */
+  padding: 0.1em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 1px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
+  font:11px/normal sans-serif;
   white-space: nowrap;
-  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
 }
+
+button.delete {
+  color: #900;
+}
+
+button.add-button {
+  color: green;
+}
+
+button:hover,
+button:focus,
+button:active {
+  border-color: #3072b3;
+  border-bottom-color: #2a65a0;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  color: #fff;
+  background-color: #3072b3;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+  background-image: -moz-linear-gradient(#599bdc, #3072b3);
+  background-image: -o-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+
