@@ -20,7 +20,7 @@ export default class Todo extends React.Component {
     return (
       <li>
         <span className={`todo-text ${todoDone}`} onClick={this.toggleDone.bind(this)}>{todo.name}</span>
-        <button className="delete" onClick={this.deleteTodo.bind(this)}> x </button>
+        <button className="delete" onClick={this.deleteTodo.bind(this)}> remove </button>
       </li>
     );
   }
