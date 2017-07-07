@@ -5,8 +5,8 @@ export default class AddTodo extends React.Component {
   addTodo() {
     const newTodoName = this.refs.todoTitle.value;
     if (newTodoName) {
-      name: newTodoName,
-          TodoStore.addNewTodo({
+      TodoStore.addNewTodo({
+        name: newTodoName
       });
       TodoStore.emitChange();
       this.refs.todoTitle.value = '';
@@ -15,12 +15,12 @@ export default class AddTodo extends React.Component {
 
   render() {
     return (
-      <div className="add-todo">
-        <input type="text" placeholder="Todo four" ref="todoTitle" />
-        <button className="add-button" onClick={this.addTodo.bind(this)}>
-          Add Todo
-        </button>
-      </div>
+        <div className="add-todo">
+          <input type="text" placeholder="Todos" ref="todoTitle" />
+          <button className="add-button" onClick={this.addTodo.bind(this)}>
+            Add
+          </button>
+        </div>
     );
   }
 }
